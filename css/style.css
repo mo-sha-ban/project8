@@ -1,0 +1,881 @@
+:root {
+  --main-color: #b1714a;
+  --main-padding:  padding: 10px 60px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Start Stettings Box  */
+.settings-box {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -271px;
+  height: 100vh;
+  background: #ffffffc2;
+  z-index: 10;
+  border-radius: 10px;
+  padding: 33px 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 1s;
+  border: 0.5px solid black;
+
+}
+
+.open {
+  left: 0px;
+}
+
+.settings-box .toggler {
+  width: 20px;
+  position: absolute;
+  top: 100px;
+  right: -40px;
+  background: white;
+  padding: 10px;
+  border-radius: 0px  8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.settings-box .toggler:hover {
+  transform: scale(1.1);
+}
+
+.settings-box .toggler .gear {
+  font-size: 20px;
+}
+
+.settings-box .settings-container {
+
+}
+
+.settings-box .settings-container h1 {
+  margin: 5px 20px;
+  font-family: "Rubik Dirt";
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 25px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.settings-container .box {
+  background: #eee;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  box-shadow: 0px 0px 30px -10px;
+  border: 0.5px solid black;
+}
+
+.settings-container .box h3 {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 10px auto 0px;
+}
+
+.settings-container .box .colors-list {
+  list-style: none;
+  display: flex;
+  padding: 0px;
+  justify-content: center;
+  margin: 10px auto 0;
+}
+
+.settings-container .box .colors-list li {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  margin: 5px;
+  border-radius: 4px;
+  transition: 0.3s;
+  opacity: 50%;
+}
+
+.settings-container .box .colors-list .active {
+  opacity: 1;
+  box-shadow: 0px 0px 15px -3px;
+  transform: scale(1.1) translateY(5px);
+  border-radius: 8px;
+}
+
+.settings-container .box .colors-list li:hover {
+  /* transform: scale(1.2); */
+}
+
+.settings-container .box .colors-list li:first-child {
+  background-color: #b1714a;
+}
+
+.settings-container .box .colors-list li:nth-child(2) {
+  background-color: #fc3535;
+}
+
+.settings-container .box .colors-list li:nth-child(3) {
+  background-color: #3078ff;
+}
+
+.settings-container .box .colors-list li:nth-child(4) {
+  background-color: #adff2f;
+}
+
+.settings-container .box .colors-list li:nth-child(5) {
+  background-color: #f0ff1a;
+}
+
+.settings-container .random-bg .yes,
+.settings-container .random-bg .no {
+  width: 70px;
+  border-radius: 8px;
+  color: white;
+  padding: 5px;
+  margin: 10px;
+  display: inline-block;
+  font-family: "Rubik Dirt";
+  font-weight: normal;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.settings-container .random-bg span.active {
+  transform: scale(1.1);
+  opacity: 100%;
+  color: black;
+}
+
+.settings-container .random-bg .yes {
+  background-color: #3078ff;
+}
+
+.settings-container .random-bg .no {
+  background-color: #fc3535;
+}
+
+.settings-container .random-bg .yes:hover,
+.settings-container .random-bg .no:hover {
+  color: black;
+  opacity: 75%;
+}
+
+/* End Stettings Box  */
+
+
+
+
+/* Start Bullets  */
+.bullets {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+.bullets .bullet {
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: 3px solid var(--main-color);
+  z-index: 1000;
+  border-radius: 50%;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.bullets .bullet .tooltip {
+  padding: 6px 10px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  width: 120px;
+  position: absolute;
+  right: 35px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  display: none;
+}
+.bullets .bullet .tooltip::after {
+  content: "";
+  position: absolute;
+  border: 9px solid;
+  border-color: transparent transparent transparent var(--main-color);
+  top: 50%;
+  transform: translateY(-50%);
+  right: -17px;
+}
+.bullets .bullet:hover .tooltip {
+  display: block;
+}
+/* End Bullets  */
+
+/* Start Landing  */
+.land-page {
+  height: 100vh;
+  background-image: url(../imgs/book\ \(1\).jpg);
+  background-size: cover;
+  margin: auto;
+  border-radius: 5px;
+  position: relative;
+}
+
+.land-page .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.land-page .header-area {
+  color: white;
+  z-index: 2;
+  position: relative;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 30px -10px black;
+  border-radius: 10px;
+  margin: auto 25px;
+}
+
+.land-page .logo {
+  font-family: "Rubik Dirt", cursive;
+  width: 300px;
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
+  letter-spacing: 1px;
+  background-image: linear-gradient(-170deg,
+      var(--main-color) 0% 51%,
+      white 45% 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.land-page .links {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: end;
+  margin-right: 40px;
+}
+
+.land-page .links li {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.land-page .links a {
+  color: white;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.land-page .links a:hover,
+.land-page .links a.active {
+  color: var(--main-color);
+  transform: scale(1.1);
+}
+
+.land-page .intro {
+  z-index: 2;
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.land-page .intro h1 span {
+  background-image: linear-gradient(30deg,
+      var(--main-color) 0% 45%,
+      white 45% 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.land-page .intro h1 {
+  letter-spacing: 1px;
+  background-image: linear-gradient(235deg,
+      var(--main-color) 0% 45%,
+      white 45% 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-family: "Rubik Dirt", cursive;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+.land-page .intro p {
+  line-height: 1.6;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.land-page .intro p span {
+  background-image: linear-gradient(-200deg,
+      var(--main-color) 0% 51%,
+      white 45% 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Rubik Dirt";
+  font-weight: normal;
+}
+
+/* End Landing  */
+
+/* Start About  */
+.about {
+  padding: var(--main-padding);
+  background: #ddd;
+}
+
+.container {
+  margin: 10px;
+  padding: 30px 0px;
+}
+.about .container {
+  display: flex;
+}
+
+.about .container .text-box {
+  flex: 45%;
+  align-items: center;
+  margin: auto;
+}
+
+.about .container .text-box h2 {
+  color: var(--main-color);
+  font-family: "Rubik Dirt";
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.about .container .text-box p {
+  color: #585858;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: math;
+  font-weight: 800;
+  text-align: center;
+}
+
+.about .container .text-box p::first-letter {
+  color: var(--main-color);
+  font-size: 25px;
+}
+
+.about .container .img-box {
+  flex: 45%;
+  margin-left: 20px;
+}
+
+.about .container .img-box img {
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px 0px;
+}
+
+/* End About  */
+
+
+
+
+/* Start Skills  */
+.skills {
+  padding: var(--main-padding);
+}
+.skills .container {
+  display: block;
+}
+.container h2 {
+  color: var(--main-color);
+  font-family: "Rubik Dirt";
+  letter-spacing: 1px;
+  margin: 0px auto 40px;
+  text-align: center;
+  font-weight: normal;
+}
+.skills .container .skill-box{
+  display: flex;
+  background-color: #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.skills .container .skill-name{
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-weight: normal;
+  font-family: "Rubik Dirt";
+  letter-spacing: 1px;
+  position: relative;
+}
+.skills .container .skill-name::before {
+  position: absolute;
+  content: "";
+  background-color: white;
+  width: 3px ;
+  height: 142%;
+  right: 5px;
+  top: -10px;
+}
+.skills .container .skill-progress{
+  width: 100%;
+  height: 40px;
+  background-color: #f7f7f7;
+  margin: auto 10px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.skills .container .skill-progress span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 3s;
+  width: 0%;
+}
+.skills .container .skill-progress .fi-sp {
+  background-color: orangered;
+}
+.skills .container .skill-progress .s-sp{
+  background-color: dodgerblue;
+}
+.skills .container .skill-progress .th-sp{
+  background-color: gold;
+}
+.skills .container .skill-progress .f-sp{
+  background-color: #ffab40;
+}
+
+/* End Skills  */
+
+
+
+
+/* Start Gallery  */
+
+.gallery {
+  padding: var(--main-padding);
+}
+.gallery .container { 
+  display: block;
+}
+.gallery .container h3 { 
+  font-family: "Rubik Dirt";
+  font-size: 25px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.gallery .container .img-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #ddd;
+  padding: 40px 20px;
+  margin: 30px;
+  border-radius: 15px;
+}
+.gallery .container .img-box img {
+  width: 300px;
+  padding: 5px;
+  margin: 5px;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.gallery .container .img-box img:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+.gallery .container .img-box .dif:hover {
+  transform: rotate(-10deg);
+}
+
+
+.popup-over {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 10000;
+}
+.popup-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10001;
+  border: 3px solid white;
+  background-color: #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+}
+.popup-box h3 {
+  color: var(--main-color);
+  text-align: center;
+  font-family: 'Rubik Dirt';
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+.popup-box img {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid white;
+}
+.popup-box .close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  background-color: #ddd;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: 3px solid white;
+  font-size: 30px;
+  font-family: 'Rubik Dirt';
+  color: red;
+  transition: .3s;
+  cursor: pointer;
+}
+/* End Gallery  */
+
+
+
+
+/* Start Timeline  */
+.timeline {
+   padding: var(--main-padding);
+   background-color: #ddd;
+   border-radius: 15px 45px;
+}
+.timeline .container {
+  padding-bottom: 0px;
+}
+.timeline .time-content {
+  position: relative;
+  overflow: hidden;
+}
+.timeline .time-content::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: var(--main-color);
+  top: 0;
+  left: 50%;
+}
+.timeline .time-content .year {
+  position: relative;
+  z-index: 2;
+  margin: 20px auto;
+  padding: 3px 6px;
+  background-color: var(--main-color);
+  color: white;
+  font-family: 'Rubik Dirt';
+  text-align: center;
+  width: 50px;
+  border-radius: 5px;
+}
+.timeline .time-content .left,
+.timeline .time-content .right {
+  position: relative;
+  width: calc(50% - 40px);
+  margin: 0px 15px 50px;
+}
+.timeline .time-content .left {
+  float: left;
+}
+.timeline .time-content .right {
+  float: right;
+}
+.timeline .time-content .content {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px 25px;
+  text-align: center;
+}
+.timeline .time-content .content h4 {
+  font-family: 'Rubik Dirt';
+  letter-spacing: 1px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.timeline .time-content .content p {
+  line-height: 1.6;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 10px;
+}
+.clearfix {
+  clear: both;
+}
+.timeline .time-content .right::before, 
+.timeline .time-content .left::before {
+  position: absolute;
+  content: "";
+  background-color: white;
+  border: 3px solid var(--main-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 25px;
+}
+.timeline .time-content .right::before {
+  left: -34px;
+}
+.timeline .time-content .left::before {
+  right: -37px;
+}
+.timeline .time-content .right::after, 
+.timeline .time-content .left::after {
+  content: "";
+  position: absolute;
+  border: 10px solid;
+  border-color: transparent transparent transparent white;
+  top: 25px;
+}
+.timeline .time-content .right::after {
+  border-color: transparent white transparent transparent ;
+  left: -20px;
+}
+.timeline .time-content .left::after {
+  border-color: transparent transparent transparent white;
+
+  right: -20px;
+}
+/* End Timeline  */
+
+
+
+
+/* Start Feat  */
+.feat {
+ padding: var(--main-padding);
+}
+.feat h2 {
+  color: var(--main-color);
+  font-family: "Rubik Dirt";
+  letter-spacing: 1px;
+  margin: 40px auto 0px;
+  text-align: center;
+  font-weight: normal;
+}
+.feat .container {  
+  margin: 10px;
+  padding: 30px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.feat .container .feat-box {
+  width: calc(90% / 3 );
+  margin: 10px auto 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px -10px;
+  padding: 15px;
+  text-align: center;
+}
+.feat .container .feat-box img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #ddd;
+  padding: 3px;
+}
+.feat .container .feat-box h4 {
+  text-transform: uppercase;
+  font-family: cursive;
+  font-size: 18px;
+  position: relative;
+  color: var(--main-color);
+}
+.feat .container .feat-box h4::before {
+  position: absolute;
+  content: "";
+  background-color: var(--main-color);
+  width: 120px;
+  height: 3px;
+  top: 100px;
+  left: calc(50% - 60px);
+}
+.feat .container .feat-box p {
+  text-transform: capitalize;
+  color: #615555;
+  margin: auto;
+  margin-bottom: 30px;
+}
+/* End Feat  */
+
+
+
+/* Start Testimoials  */
+.testi {
+  padding: var(--main-padding);
+  position: relative;
+}
+.testi::before{
+  position: absolute;
+  content: "";
+  width: 50%;
+  background-color: var(--main-color);
+  top: 0px;
+  left: 0px;
+  height: 100%;
+}
+.testi::after{
+  position: absolute;
+  content: "";
+  width: 50%;
+  background-color: black;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+}
+.testi .container {
+  position: relative;
+}
+.testi .container  h2 {
+  color: white;
+  font-family: "Rubik Dirt";
+  letter-spacing: 1px;
+  margin: 40px 100px 20px;
+    text-align: center;
+  font-weight: normal;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  z-index: 2;
+}
+.testi .container .content {
+  display: flex;
+}
+.testi .container .tm-box {
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  padding: 10px 25px;
+  overflow: hidden;
+  text-align: center;
+}
+.testi .container .seco{
+  background-color: transparent;
+}
+.testi .container .seco::before{
+  position: absolute;
+  content: "";
+  width: 50%;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  z-index: -1;
+  background: black;
+}
+.testi .container .seco::after{
+  position: absolute;
+  content: "";
+  width: 50%;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  z-index: -1;
+  background: var(--main-color);
+}
+.testi .container .tm-box > p {
+  color: #707070;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 15px auto;
+}
+.testi .container .tm-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline;
+  background-color: var(--main-color);
+}
+.testi .container .tm-box .disc {
+  display: inline-block;
+}
+.testi .container .tm-box h5 {
+  color: var(--main-color);
+  text-transform: uppercase;
+  margin: 0px auto 10px;
+  font-family: 'Rubik Dirt';
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.testi .container .tm-box .disc p {
+  margin: 0px auto 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #707070;
+}
+.testi .container .tm-box p span {
+  color: var(--main-color);
+  font-family: 'Rubik Dirt';
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.testi .container .tm-box .last {
+  background-color: black;
+}
+.testi .container .seco{
+  background-color: transparent;
+  box-shadow: 0px 0px 25px -10px white;
+}
+.testi .container .seco h5 {
+  color: white;
+  margin: 10px 19px;
+  text-align: left;
+}
+.testi .container .seco p {
+  color: white;
+}
+.testi .container .seco .disc p {
+  color: white;
+}
+.testi .container .seco .disc p span {
+  color: white;
+  font-family: 'Rubik Dirt';
+}
+/* End Testimoials  */
